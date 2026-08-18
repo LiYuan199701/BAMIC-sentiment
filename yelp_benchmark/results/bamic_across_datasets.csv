@@ -1,0 +1,6 @@
+dataset,config,test_acc,tuned_acc,test_auc,ece,note
+Wine,GloVe lamB=0.10 lamS=0.01,0.862,,0.9456,0.0706,original corpus
+SST-2,unfrozen ep5 heads4 lamS=0.02,0.8096,0.8119,0.8796,0.094,short sentences; unfrozen helps
+IMDB,frozen len400 ep15 warmup2 lamS=0.02,0.865,,0.9406,0.0354,len256 ep10 variant: ECE 0.0098 (best of all models)
+Yelp,frozen len256 ep10 warmup2 lamS=0.02,0.8927,0.901,0.9617,0.0477,best BAMIC accuracy of any dataset
+ERASER movies,frozen len800 ep15 warmup2,,,,,"below data floor (N=1,600): gate magnitude collapse; ranking survives (AUPRC 0.32)"

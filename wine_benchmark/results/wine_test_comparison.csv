@@ -1,0 +1,8 @@
+model,test_acc,test_f1,test_auc,brier,nll,ece,note
+BERT-base,0.8877,0.8346,0.9565,0.0812,0.2632,0.0305,
+RoBERTa-base,0.8854,0.8319,0.956,0.0821,0.2668,0.0341,
+BiLSTM (GloVe),0.8769,0.8198,0.9504,0.0862,0.2738,0.0273,best ECE in table
+LogReg (BoW),0.8715,0.8036,0.9447,0.0932,0.3047,0.0535,lowest F1 of all models (imbalance)
+BAMIC (frozen ep10),0.8637,0.8179,0.944,0.0976,0.306,0.0632,tuned: acc 0.8695 (thr 0.67) / F1 0.8197 (thr 0.53); reproduces full-data 0.8620 on 1/5 the data
+CNN (GloVe),0.8622,0.813,0.946,0.097,0.3069,0.0605,
+BAMIC (frozen ep15),0.8585,0.8117,0.9418,0.0994,0.3111,0.0621,ep15 slightly overfits - ep10 is the headline

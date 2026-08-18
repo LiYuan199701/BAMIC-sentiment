@@ -1,0 +1,7 @@
+model,test_acc,test_f1,test_auc,brier,nll,ece,note
+RoBERTa-base,0.9673,0.9675,0.9952,0.0303,0.1487,0.0288,
+BERT-base,0.9581,0.9581,0.9919,0.0364,0.1562,0.0313,
+LogReg (BoW),0.9257,0.9257,0.9791,0.0685,0.2524,0.1034,overconfident: worst ECE in table
+CNN (GloVe),0.9169,0.9168,0.9744,0.0612,0.2113,0.0183,best ECE in table
+BiLSTM (GloVe),0.9148,0.9134,0.9739,0.0632,0.2196,0.029,
+BAMIC (frozen ep10),0.8927,0.8974,0.9617,0.0802,0.2752,0.0477,tuned threshold 0.74 -> acc 0.9010; healthy gate (content_delta 0.59 vs sw 0.13)
