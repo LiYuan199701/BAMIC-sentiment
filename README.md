@@ -34,7 +34,14 @@ All experiments are Jupyter notebooks designed for a Google Colab GPU runtime
 downloads/organizes the public dataset and writes fixed train/validation/test
 splits), then the model notebooks in numeric order. The BAMIC notebooks expect
 pre-trained GloVe embeddings (`glove.6B.300d.txt`) in the project's
-`word_embedding` folder. Each run writes its full configuration to a
+`word_embedding` folder, downloadable from the Stanford NLP GloVe
+distribution:
+
+```
+wget https://nlp.stanford.edu/data/glove.6B.zip
+unzip glove.6B.zip glove.6B.300d.txt -d word_embedding/
+```
+ Each run writes its full configuration to a
 `run_config.csv` artifact (exact Python/PyTorch/CUDA versions, seeds, and
 hyperparameters), so every reported number is traceable to its environment.
 
@@ -48,8 +55,10 @@ statistics from the raw per-seed outputs.
 
 No dataset is redistributed here. SST-2, IMDB, and Yelp Review Polarity are
 publicly available from the sources cited in the paper; the preparation
-notebooks fetch/build them. The wine-review corpus is likewise built by its
-preparation notebook from the source cited in the paper.
+notebooks fetch/build them. The wine-review corpus was compiled from Wine
+Spectator reviews as described in the paper's cited source and cannot be
+redistributed for copyright reasons; `00_prepare_wine_data.ipynb` documents
+the expected input schema and the full cleaning and splitting pipeline.
 
 ## Environment
 
