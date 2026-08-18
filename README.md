@@ -56,8 +56,7 @@ statistics from the raw per-seed outputs.
 No dataset is redistributed here. SST-2, IMDB, and Yelp Review Polarity are
 publicly available from the sources cited in the paper; the preparation
 notebooks fetch/build them. The wine-review corpus was compiled from Wine
-Spectator reviews as described in the paper's cited source and cannot be
-redistributed for copyright reasons; `00_prepare_wine_data.ipynb` documents
+Spectator reviews as described in the paper's cited source; `00_prepare_wine_data.ipynb` documents
 the expected input schema and the full cleaning and splitting pipeline.
 
 ## Environment
